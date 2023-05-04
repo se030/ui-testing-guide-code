@@ -62,8 +62,13 @@
     "@storybook/react": "^7.0.8",
     "@storybook/react-webpack5": "^7.0.8",
     "chromatic": "^6.17.4",
+    "msw": "^1.2.1",
+    "msw-storybook-addon": "^1.8.0",
     "storybook": "^7.0.8"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "ui-testing-guide-code@0.1.0"
+  "_id": "ui-testing-guide-code@0.1.0",
+  "msw": {
+    "workerDirectory": "public"
+  }
 }
