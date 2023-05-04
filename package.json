@@ -66,6 +66,7 @@
     "@storybook/react-webpack5": "^7.0.8",
     "@storybook/test-runner": "^0.10.0",
     "@storybook/testing-library": "^0.1.0",
+    "axe-playwright": "^1.2.3",
     "chromatic": "^6.17.4",
     "msw": "^1.2.1",
     "msw-storybook-addon": "^1.8.0",
