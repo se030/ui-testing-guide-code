@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# UI Testing
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Storybook UI Testing Handbook](https://storybook.js.org/tutorials/ui-testing-handbook/react/ko/introduction/) 내용을 정리하며 실습한 레포지토리입니다.
 
-## Available Scripts
+![](https://storybook.js.org/tutorials/ui-testing-handbook/ui-testing-workflow.png)
 
-In the project directory, you can run:
+1. 📚 Storybook을 이용한 컴포넌트 분리. props와 모의 데이터를 사용하여 각 상태를 재현하는 테스트 케이스를 작성합니다.
 
-### `yarn start`
+2. ✅ Chromatic을 이용한 시각적 요소 버그 포착 및 구성 확인.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. 🐙 Jest와 Testing Library를 이용한 상호작용 검증.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+4. ♿️ Axe를 이용한 접근성 심사.
 
-### `yarn test`
+5. 🔄 Cypress를 이용해 e2e 테스트 코드를 작성하여 사용자 흐름 검증.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+6. 🚥 GitHub Actions을 통해 자동으로 테스트를 실행해 회귀 포착.
 
-### `yarn build`
+## UI 테스트 대상
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 시각적 요소
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 컴포넌트가 props 및 상태에 대해 올바르게 렌더링되는지
+- 모든 컴포넌트의 스크린샷을 찍은 뒤 commit 단위에서 비교하여 변경 사항을 식별
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 구성 요소
 
-### `yarn eject`
+- 컴포넌트들은 데이터의 흐름을 따라 서로 연결
+- 상위 레벨의 컴포넌트나 페이지에서 시각적 요소 테스트를 실행하면 연결을 확인할 수 있음
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 상호작용
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- 이벤트가 의도한 대로 처리되는지 검증
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- 컴포넌트를 분리해서 렌더링한 다음, 클릭이나 입력 같은 사용자 동작을 시뮬레이션하고 상태가 올바르게 업데이트 되었는지 확인
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 접근성
 
-## Learn More
+- 시각장애, 청각장애 등 다양한 장애와 관련된 사용성을 보장하기 위해
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Axe와 같은 자동화 도구를 QA에 활용해 접근성 위반을 탐지
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- 사람의 주의가 필요한 까다로운 문제에 대해서는 실제 디바이스에서 수동으로 QA를 수행
 
-### Code Splitting
+### 사용자 흐름(User flow)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- 간단한 작업이라도 사용자가 여러 컴포넌트에 걸쳐 일련의 단계를 완료해야
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Cypress 및 Playwright와 같은 도구를 사용하면 전체 애플리케이션에 대해 테스트를 실행하여 이러한 상호작용을 확인
