@@ -4602,6 +4602,25 @@
     lodash.union "^4.6.0"
     lodash.values "^4.3.0"
 
+"@storybook/addon-a11y@^7.0.8":
+  version "7.0.8"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-a11y/-/addon-a11y-7.0.8.tgz#4784d2d0b3575f98d606bc122cacfe6ddb94bc62"
+  integrity sha512-TjhRTW4xXo+8oYGKbZ5NSX7i72ZNC5OD2VLmn8ywSGHAV/UOFRG5YSs9GeMPKsvGRcsztytj1D/Pl5LWL3VwlQ==
+  dependencies:
+    "@storybook/addon-highlight" "7.0.8"
+    "@storybook/channels" "7.0.8"
+    "@storybook/client-logger" "7.0.8"
+    "@storybook/components" "7.0.8"
+    "@storybook/core-events" "7.0.8"
+    "@storybook/global" "^5.0.0"
+    "@storybook/manager-api" "7.0.8"
+    "@storybook/preview-api" "7.0.8"
+    "@storybook/theming" "7.0.8"
+    "@storybook/types" "7.0.8"
+    axe-core "^4.2.0"
+    lodash "^4.17.21"
+    react-resize-detector "^7.1.2"
+
 "@storybook/addon-actions@7.0.8", "@storybook/addon-actions@^7.0.8":
   version "7.0.8"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-7.0.8.tgz#a1fe35fe1a37955b23b572b993d1ee5a2c0e25a4"
@@ -7182,6 +7201,11 @@ available-typed-arrays@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/available-typed-arrays/-/available-typed-arrays-1.0.5.tgz#92f95616501069d07d10edb2fc37d3e1c65123b7"
   integrity sha512-DMD0KiN46eipeziST1LPP/STfDU0sufISXmjSgvVsoU2tqxctQeASejWcfNtxYKqETM1UxQ8sp2OrSBWpHY6sw==
+
+axe-core@^4.2.0:
+  version "4.7.0"
+  resolved "https://registry.yarnpkg.com/axe-core/-/axe-core-4.7.0.tgz#34ba5a48a8b564f67e103f0aa5768d76e15bbbbf"
+  integrity sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==
 
 axe-core@^4.3.5:
   version "4.4.2"
@@ -15105,6 +15129,13 @@ react-remove-scroll@2.4.1:
     tslib "^1.0.0"
     use-callback-ref "^1.2.3"
     use-sidecar "^1.0.1"
+
+react-resize-detector@^7.1.2:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/react-resize-detector/-/react-resize-detector-7.1.2.tgz#8ef975dd8c3d56f9a5160ac382ef7136dcd2d86c"
+  integrity sha512-zXnPJ2m8+6oq9Nn8zsep/orts9vQv3elrpA+R8XTcW7DVVUJ9vwDwMXaBtykAYjMnkCIaOoK9vObyR7ZgFNlOw==
+  dependencies:
+    lodash "^4.17.21"
 
 react-scripts@^5.0.1:
   version "5.0.1"
