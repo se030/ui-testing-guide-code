@@ -8,6 +8,7 @@ const config = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/preset-create-react-app',
+    '@storybook/addon-interactions',
   ],
   webpackFinal: async (config) => {
     return {
@@ -28,6 +29,9 @@ const config = {
   },
   docs: {
     autodocs: true,
+  },
+  features: {
+    interactionDebugger: true,
   },
 };
 
